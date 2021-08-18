@@ -41,5 +41,7 @@ $('#clock').countdown('2021/12/30').on('update.countdown', function(event) {
          + '<div><span>%-d</span>day%!d</div>'
          + '<div><span>%H</span>hr</div>'
          + '<div><span>%M</span>min</div>'
-         + '<div><span>%S</span>sec</div>'));
-     });
+         + '<div><span>%S</span>sec</div>'))
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { $(this).find("span").css('padding-bottom','10px'); }
+});
