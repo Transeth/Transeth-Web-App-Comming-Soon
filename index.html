@@ -8,7 +8,6 @@
     <meta name="keywords" content="mysmis, pocu, fonduri europene, formare profesionala, start-up, startup">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Transeth binds all the experts required for transitioning analog organizations into the ethereal realm">
     <meta name="author" content="Transeth Cluser">
     <title>Transeth</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" async>
@@ -64,6 +63,11 @@
                     </div>
                 </div>
             </div>
+            <div style="position: absolute; bottom: -20px; width:100%;">
+                <a href="./../screenshots/Transeth MPN letter.pdf" target="_blank">
+                    <img src="./../screenshots/Transeth MPN.png" style=" display: block; margin-left: auto; margin-right: auto; width: 400px; " />
+                </a>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
@@ -89,26 +93,32 @@
     </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6T9BGDM4"></script>
 <script>
-    //$(document).ready(function () {
-    //    var userLang = navigator.language || navigator.userLanguage;
-    //    if (userLang != thisLanguage) {
-            
-    //        switch (userLang) {
-    //            case 'ro-RO':
-    //                window.location.href = window.location.origin + '/ro';
-    //                break;
-    //            default:
-    //                break;
-    //        }
+    $(document).ready(function () {
+        var thisLanguage = 'en';
+        var userLang = navigator.language || navigator.userLanguage;
+	console.log("navigator.language", navigator.language);
+	console.log("navigator.userLanguage", navigator.userLanguage);
+        if (userLang != thisLanguage) {
+            $(".site-wrapper").hide();
+            switch (userLang) {
+                case 'ro-RO':
+                    window.location.href = window.location.origin + '/ro';
+                    break;
+                case 'ro':
+                    window.location.href = window.location.origin + '/ro';
+                    break;
+                default:
+                    $(".site-wrapper").show();
+                    break;
+            }
 
-    //    }
-    //});
+        }
+    });
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-QF6T9BGDM4');
-  var thisLanguage = 'en';  
 </script>
 </body>
 </html>
